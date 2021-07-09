@@ -41,4 +41,8 @@
        
  4. Find the no.of people in a bus, given the data of people onboarding & alighting at each station
 
-        
+        onboard=["rutwik","anurag","pranav","mukesh","anubhav", "harish"]
+        alighting=["mukesh","anubhav", "harish"]
+        d=len(set(onboard)-set(alighting))
+        print(d)
+5. Find the missing number, given the original list and modified one
