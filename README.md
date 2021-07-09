@@ -170,9 +170,15 @@
         
 13. Given a number, find the largest number by deleting single digit (order of digits will remain same)
 
-        
-        
-15. Given a number, find the largest number by shuffling the digits
+        numbers=35813
+        num=str(numbers)
+        res=[]
+
+        for i in range(len(num)):
+            res.append(int(num[:i]+num[i+1:]))
+        print(max(res))
+
+14. Given a number, find the largest number by shuffling the digits
 16. Compute the word frequency in given message
 17. RGB to Hex conversion and vice versa, e.g. (255,0,255) into 0xFF00FF
 18. Generate accumulated strings,e.g. abcd ==> A-Bb-Ccc-Dddd
