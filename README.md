@@ -61,7 +61,19 @@
         print("lowest diff. is",y-x)
         
 7. In a given list, count no.of elements smaller than their mean
-9. Correct the malformed time string , for e.g "5:70:65" to "6:11:05"
+
+        mylist=[9,8,6,5,3,8]
+
+        r =sum(mylist)/len(mylist)
+
+        #print(r)
+
+        for i in range (0,len(mylist)):
+
+            if (mylist[i]<r):
+                print(mylist[i])
+ 
+8. Correct the malformed time string , for e.g "5:70:65" to "6:11:05"
 10. Correct the malformed date string , for e.g. "45/8/2018" to "14/9/2018"
 11. Convert ip address from "a.b.c.d" format into integer and vice versa
 12. Check whether given string is isogram or not
