@@ -90,7 +90,22 @@
         print(t)
         
 9. Correct the malformed date string , for e.g. "45/8/2018" to "14/9/2018"
-11. Convert ip address from "a.b.c.d" format into integer and vice versa
+
+        days=45
+        month=8
+        year=2018
+        if(days>31):
+            month+=1
+            days=days-31
+
+        if(month>12):
+            years+=1
+            month=month-12
+
+        date=str(days)+":"+str(month)+":"+str(year)
+        print(date)
+        
+10. Convert ip address from "a.b.c.d" format into integer and vice versa
 12. Check whether given string is isogram or not
 13. Given a string, find the mexican wave
 14. iven a number, find the largest number by deleting single digit (order of digits will remain same)
