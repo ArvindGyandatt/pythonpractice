@@ -73,9 +73,12 @@
  
 8. Correct the malformed time string , for e.g "5:70:65" to "6:11:05"
         
-        hrs=2
-        min=86
-        sec=93
+        t='5:70:65'
+        a=t.split(":")
+        hrs=int(a[0])
+        min=int(a[1])
+        sec=int(a[2])
+        
         if(sec>59):
             min+=1
             sec=sec-60
@@ -89,18 +92,41 @@
         
 9. Correct the malformed date string , for e.g. "45/8/2018" to "14/9/2018"
 
-        days=45
-        month=8
-        year=2018
-        if(days>31):
-            month+=1
-            days=days-31
+        d='49/07/2028'
+        a= d.split("/")
+        days = int(a[0])
+        month = int(a[1])
+        years = int(a[2])
+        
+
+        m31=[1,3,5,7.8,10,12]
+        m30=[4,6,9,11]
+
+        days=int(a[0])
+        month=int(a[1])
+        year=int(a[2])
+
+        if month in m31:
+            if(days>31):
+                month+=1
+                days=days-31
+
+        elif month in m30:
+            if(days>30):
+                month+=1
+                days=days-30
+
+        elif month == 2:
+            if(days>28):
+                month+=1
+                days=days-28
+
 
         if(month>12):
             years+=1
             month=month-12
 
-        date=str(days)+":"+str(month)+":"+str(year)
+        date=str(days)+"/"+str(month)+"/"+str(year)
         print(date)
         
 10. Convert ip address from "a.b.c.d" format into integer and vice versa
@@ -180,11 +206,11 @@
 
 14. Given a number, find the largest number by shuffling the digits
  
-num = 38293367
+        num = 38293367
 
-count = [0 for x in range(10)]
+        count = [0 for x in range(10)]
 
-string = str(num)
+        string = str(num)
 
         for i in range(len(string)):
             count[int(string[i])] = count[int(string[i])] + 1
