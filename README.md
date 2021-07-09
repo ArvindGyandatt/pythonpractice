@@ -66,8 +66,6 @@
 
         r =sum(mylist)/len(mylist)
 
-        #print(r)
-
         for i in range (0,len(mylist)):
 
             if (mylist[i]<r):
@@ -170,7 +168,10 @@
             arr.append(a)
         print(arr)
         
-13. iven a number, find the largest number by deleting single digit (order of digits will remain same)
+13. Given a number, find the largest number by deleting single digit (order of digits will remain same)
+
+        
+        
 15. Given a number, find the largest number by shuffling the digits
 16. Compute the word frequency in given message
 17. RGB to Hex conversion and vice versa, e.g. (255,0,255) into 0xFF00FF
