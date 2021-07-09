@@ -179,6 +179,27 @@
         print(max(res))
 
 14. Given a number, find the largest number by shuffling the digits
-16. Compute the word frequency in given message
+ 
+num = 38293367
+
+count = [0 for x in range(10)]
+
+string = str(num)
+
+        for i in range(len(string)):
+            count[int(string[i])] = count[int(string[i])] + 1
+
+        result = 0
+        multiplier = 1
+
+        for i in range(10):
+            while count[i] > 0:
+                result = result + (i * multiplier)
+                count[i] = count[i] - 1
+                multiplier = multiplier * 10
+
+        print(result)
+        
+15. Compute the word frequency in given message
 17. RGB to Hex conversion and vice versa, e.g. (255,0,255) into 0xFF00FF
 18. Generate accumulated strings,e.g. abcd ==> A-Bb-Ccc-Dddd
