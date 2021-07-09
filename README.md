@@ -227,5 +227,18 @@
         print(result)
         
 15. Compute the word frequency in given message
-17. RGB to Hex conversion and vice versa, e.g. (255,0,255) into 0xFF00FF
+
+        str = 'apple mango apple orange orange apple guava mango mango'
+
+        str = str.split()
+        str2 = []
+
+        for i in str:
+            if i not in str2:
+                str2.append(i)
+
+        for i in range(0, len(str2)):
+            print('Frequency of', str2[i], 'is :', str.count(str2[i]))
+            
+16. RGB to Hex conversion and vice versa, e.g. (255,0,255) into 0xFF00FF
 18. Generate accumulated strings,e.g. abcd ==> A-Bb-Ccc-Dddd
