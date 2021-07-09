@@ -150,7 +150,17 @@
         print(convert(B))
         
 11. Check whether given string is isogram or not
-13. Given a string, find the mexican wave
+
+        str1="machine"
+        arr=[]
+        for i in range(len(str1)):
+            arr.append(str1[i])
+        if(len(arr)==len(set(arr))):
+            print("isogram")
+        else:
+            print("not isogram")
+            
+12. Given a string, find the mexican wave
 14. iven a number, find the largest number by deleting single digit (order of digits will remain same)
 15. Given a number, find the largest number by shuffling the digits
 16. Compute the word frequency in given message
