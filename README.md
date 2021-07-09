@@ -8,8 +8,11 @@ n= len(mylist)
 
 res = mylist[0]
 
-# Do XOR of all elements and return
 for i in range(1, n):
     res = res ^ mylist[i]
 
 print(res)
+
+
+2. In a given list of elements, find the elements which is close to its mean
+
